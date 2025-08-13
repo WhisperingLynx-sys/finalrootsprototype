@@ -1,0 +1,697 @@
+/* ===================================
+   ADVANCED ANIMATIONS & EFFECTS 2025
+   Modern CSS with scroll-driven animations,
+   GPU acceleration, and performance optimization
+   =================================== */
+
+/* CSS Custom Properties for Animations */
+:root {
+  /* Animation Timing Functions */
+  --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-cubic: cubic-bezier(0.32, 0, 0.67, 0);
+  --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+  --bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Animation Durations */
+  --duration-fast: 0.2s;
+  --duration-normal: 0.3s;
+  --duration-slow: 0.5s;
+  --duration-slower: 0.8s;
+  
+  /* Transform Origins */
+  --transform-origin-center: 50% 50%;
+  --transform-origin-top: 50% 0%;
+  --transform-origin-bottom: 50% 100%;
+}
+
+/* Enable smooth scrolling and modern CSS features */
+html {
+  scroll-behavior: smooth;
+  interpolate-size: allow-keywords; /* 2025 CSS feature */
+}
+
+/* Performance Optimization - Will-change sparingly */
+.animate-on-scroll,
+.hover-effect,
+.custom-cursor,
+.floating-elements {
+  will-change: transform;
+}
+
+/* Remove will-change after animations complete */
+.animation-complete {
+  will-change: auto;
+}
+
+/* ===================================
+   SCROLL-DRIVEN ANIMATIONS (2025)
+   Native CSS scroll-linked animations
+   =================================== */
+
+/* Scroll Timeline Setup */
+@scroll-timeline slide-in-timeline {
+  scroll-source: auto;
+  orientation: block;
+  scroll-offsets: 0% 100%;
+}
+
+@scroll-timeline parallax-timeline {
+  scroll-source: auto;
+  orientation: block;
+}
+
+/* Fade In On Scroll */
+.fade-in-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fade-in-up linear;
+  animation-timeline: slide-in-timeline;
+  animation-range: entry 0% entry 100%;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scale In On Scroll */
+.scale-in-scroll {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: scale-in linear;
+  animation-timeline: slide-in-timeline;
+  animation-range: entry 0% entry 100%;
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide In From Left */
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slide-from-left linear;
+  animation-timeline: slide-in-timeline;
+  animation-range: entry 0% entry 100%;
+}
+
+@keyframes slide-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide In From Right */
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slide-from-right linear;
+  animation-timeline: slide-in-timeline;
+  animation-range: entry 0% entry 100%;
+}
+
+@keyframes slide-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Parallax Effect with Scroll Timeline */
+.parallax-element {
+  animation: parallax-move linear;
+  animation-timeline: parallax-timeline;
+}
+
+@keyframes parallax-move {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+/* ===================================
+   CUSTOM CURSOR ANIMATIONS
+   =================================== */
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #2ECC71;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: transform var(--duration-fast) var(--ease-out-cubic);
+}
+
+.cursor-outline {
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgba(46, 204, 113, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: all var(--duration-normal) var(--ease-out-cubic);
+}
+
+/* Cursor States */
+.cursor-hover .cursor-dot {
+  transform: translate(-50%, -50%) scale(2);
+  background: #27AE60;
+}
+
+.cursor-hover .cursor-outline {
+  width: 48px;
+  height: 48px;
+  border-color: rgba(39, 174, 96, 0.8);
+}
+
+.cursor-click .cursor-dot {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.cursor-click .cursor-outline {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===================================
+   LOADING ANIMATIONS
+   =================================== */
+
+/* Page Load Animation */
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2ECC71 0%, #27AE60 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: opacity var(--duration-slow) var(--ease-out-cubic);
+}
+
+.page-loader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-content {
+  text-align: center;
+  color: white;
+}
+
+.loader-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 10px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* ===================================
+   BUTTON ANIMATIONS
+   =================================== */
+
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all var(--duration-normal) var(--ease-out-cubic);
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left var(--duration-slow) var(--ease-out-cubic);
+}
+
+.btn-glow:hover::before {
+  left: 100%;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Ripple Effect */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width var(--duration-slow) var(--ease-out-cubic), 
+              height var(--duration-slow) var(--ease-out-cubic);
+}
+
+.btn-ripple:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ===================================
+   CARD ANIMATIONS
+   =================================== */
+
+.card-hover-effect {
+  transition: all var(--duration-normal) var(--ease-out-cubic);
+  transform-style: preserve-3d;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* 3D Card Flip */
+.card-flip {
+  perspective: 1000px;
+  height: 300px;
+}
+
+.card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform var(--duration-slower) var(--ease-out-cubic);
+  transform-style: preserve-3d;
+}
+
+.card-flip:hover .card-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.card-flip-front, .card-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-flip-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, #2ECC71 0%, #27AE60 100%);
+  color: white;
+}
+
+/* ===================================
+   TEXT ANIMATIONS
+   =================================== */
+
+/* Typewriter Effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #2ECC71;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #2ECC71; }
+}
+
+/* Text Reveal Animation */
+.text-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-reveal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #2ECC71;
+  animation: reveal var(--duration-slower) var(--ease-out-cubic) forwards;
+}
+
+@keyframes reveal {
+  to {
+    width: 0;
+  }
+}
+
+/* Gradient Text Animation */
+.gradient-text-animate {
+  background: linear-gradient(-45deg, #2ECC71, #27AE60, #2ECC71, #27AE60);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===================================
+   FLOATING ANIMATIONS
+   =================================== */
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.float-delayed {
+  animation: float 6s ease-in-out infinite 2s;
+}
+
+/* Particle Animation */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.7;
+  animation: particle-float 8s linear infinite;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ===================================
+   COUNTER ANIMATIONS
+   =================================== */
+
+.counter {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Number counting animation will be handled by JavaScript */
+.counting {
+  animation: pulse 2s ease-in-out;
+}
+
+/* ===================================
+   NAVIGATION ANIMATIONS
+   =================================== */
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background: #2ECC71;
+  transition: all var(--duration-normal) var(--ease-out-cubic);
+  transform: translateX(-50%);
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+  width: 100%;
+}
+
+/* Hamburger Animation */
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger-line {
+  width: 24px;
+  height: 2px;
+  background: white;
+  border-radius: 2px;
+  transition: all var(--duration-normal) var(--ease-out-cubic);
+  transform-origin: center;
+}
+
+.hamburger-menu.open .hamburger-line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open .hamburger-line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===================================
+   SCROLL PROGRESS INDICATOR
+   =================================== */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #2ECC71 0%, #27AE60 100%);
+  z-index: 1000;
+  transition: width 0.1s ease-out;
+}
+
+/* ===================================
+   MODAL ANIMATIONS
+   =================================== */
+
+.modal.fade .modal-dialog {
+  transform: scale(0.8) translateY(-50px);
+  transition: all var(--duration-normal) var(--ease-out-cubic);
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1) translateY(0);
+}
+
+/* ===================================
+   FORM ANIMATIONS
+   =================================== */
+
+.form-floating-label {
+  position: relative;
+}
+
+.form-floating-label label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  transition: all var(--duration-normal) var(--ease-out-cubic);
+  pointer-events: none;
+  background: white;
+  padding: 0 4px;
+}
+
+.form-floating-label input:focus + label,
+.form-floating-label input:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 0.8rem;
+  color: #2ECC71;
+  transform: translateY(-50%);
+}
+
+/* ===================================
+   REDUCED MOTION SUPPORT
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .parallax-element {
+    animation: none !important;
+  }
+  
+  .float-animation {
+    animation: none !important;
+  }
+}
+
+/* ===================================
+   HIGH PERFORMANCE OPTIMIZATIONS
+   =================================== */
+
+/* GPU Acceleration for smooth animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Optimize repaints */
+.optimize-repaint {
+  contain: layout style paint;
+}
+
+/* ===================================
+   MICRO-INTERACTIONS
+   =================================== */
+
+.micro-bounce {
+  transition: transform var(--duration-fast) var(--bounce);
+}
+
+.micro-bounce:hover {
+  transform: scale(1.05);
+}
+
+.micro-bounce:active {
+  transform: scale(0.95);
+}
+
+.micro-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Success checkmark animation */
+.success-checkmark {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #2ECC71;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #2ECC71;
+  animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+  margin: 20px auto;
+}
+
+@keyframes scale {
+  0%, 100% { transform: none; }
+  50% { transform: scale3d(1.1, 1.1, 1); }
+}
+
+@keyframes fill {
+  100% { box-shadow: inset 0px 0px 0px 30px #2ECC71; }
+}
+
+.success-checkmark-check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% { stroke-dashoffset: 0; }
+}
