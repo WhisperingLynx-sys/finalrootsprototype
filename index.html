@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roots Academy - Premium Coaching Excellence</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="css/animations.css" as="style">
+    
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body class="cursor-custom">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+    
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="floating-leaf leaf-1"><i class="fas fa-leaf"></i></div>
+        <div class="floating-leaf leaf-2"><i class="fas fa-seedling"></i></div>
+        <div class="floating-leaf leaf-3"><i class="fas fa-tree"></i></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-morphism">
+        <div class="container">
+            <a class="navbar-brand animated-logo" href="index.html">
+                <div class="logo-container">
+                    <svg width="50" height="50" viewBox="0 0 100 100" class="logo-svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#2ECC71;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#27AE60;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Tree trunk -->
+                        <rect x="45" y="60" width="10" height="30" fill="#8B4513" rx="2"/>
+                        <!-- Tree leaves -->
+                        <circle cx="50" cy="45" r="20" fill="url(#logoGradient)" class="pulse-animation"/>
+                        <!-- Roots -->
+                        <path d="M45 90 Q35 95 25 85 Q40 92 45 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                        <path d="M55 90 Q65 95 75 85 Q60 92 55 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                        <path d="M50 90 Q50 100 45 105 Q52 98 50 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                        <!-- Academic cap on tree -->
+                        <polygon points="35,35 65,35 50,25" fill="#2C3E50"/>
+                        <rect x="48" y="25" width="4" height="8" fill="#2C3E50"/>
+                    </svg>
+                    <span class="logo-text">Roots Academy</span>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler hamburger-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover" href="index.html">
+                            <i class="fas fa-home nav-icon"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover" href="about.html">
+                            <i class="fas fa-users nav-icon"></i>About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover" href="courses.html">
+                            <i class="fas fa-graduation-cap nav-icon"></i>Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover" href="results.html">
+                            <i class="fas fa-trophy nav-icon"></i>Results
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover" href="testimonials.html">
+                            <i class="fas fa-comments nav-icon"></i>Testimonials
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover cta-nav" href="contact.html">
+                            <i class="fas fa-phone nav-icon"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center position-relative overflow-hidden">
+        <div class="hero-bg-video">
+            <video autoplay muted loop class="w-100 h-100 object-fit-cover">
+                <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container hero-content position-relative z-3">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-7">
+                    <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="hero-badge mb-3">
+                            <span class="badge-text">🏆 14+ Years of Excellence Since 2009</span>
+                        </div>
+                        <h1 class="hero-title mb-4">
+                            <span class="gradient-text typing-animation">Transform Your Future</span><br>
+                            <span class="highlight-text">with Roots Academy</span>
+                        </h1>
+                        <p class="hero-subtitle mb-5" data-aos="fade-up" data-aos-delay="200">
+                            Premium coaching for IIT-JEE • EAMCET • NEET • BITSAT<br>
+                            Where dreams take root and success grows naturally
+                        </p>
+                        
+                        <div class="hero-stats mb-5" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stat-item">
+                                <div class="stat-number counter" data-target="1000">0</div>
+                                <div class="stat-label">Success Stories</div>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <div class="stat-number counter" data-target="98">0</div>
+                                <div class="stat-label">% Success Rate</div>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <div class="stat-number counter" data-target="14">0</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                            <a href="courses.html" class="btn btn-primary btn-glow me-3">
+                                <span class="btn-text">Explore Courses</span>
+                                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="tel:+919866915814" class="btn btn-outline-light btn-pulse">
+                                <i class="fas fa-phone me-2"></i>Call Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5">
+                    <div class="hero-visual" data-aos="fade-left" data-aos-delay="500">
+                        <div class="floating-cards">
+                            <div class="achievement-card card-1">
+                                <div class="card-icon"><i class="fas fa-trophy"></i></div>
+                                <div class="card-text">Top IIT Ranks</div>
+                            </div>
+                            <div class="achievement-card card-2">
+                                <div class="card-icon"><i class="fas fa-medal"></i></div>
+                                <div class="card-text">EAMCET Toppers</div>
+                            </div>
+                            <div class="achievement-card card-3">
+                                <div class="card-icon"><i class="fas fa-star"></i></div>
+                                <div class="card-text">NEET Success</div>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-illustration">
+                            <div class="illustration-element element-1"></div>
+                            <div class="illustration-element element-2"></div>
+                            <div class="illustration-element element-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features-section py-5 position-relative">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <div class="section-badge">
+                    <span class="badge-text">🌟 Why Choose Us</span>
+                </div>
+                <h2 class="section-title">Experience Excellence Like Never Before</h2>
+                <p class="section-subtitle">Discover what makes Roots Academy the preferred choice for serious aspirants</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card interactive-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                            <div class="icon-bg"></div>
+                        </div>
+                        <h4 class="feature-title">AI-Enhanced Learning</h4>
+                        <p class="feature-desc">Personalized study plans powered by artificial intelligence to optimize your learning journey</p>
+                        <div class="feature-stats">
+                            <span class="stat">40% Faster Learning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card interactive-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users-cog"></i>
+                            <div class="icon-bg"></div>
+                        </div>
+                        <h4 class="feature-title">Expert Faculty</h4>
+                        <p class="feature-desc">Learn from IIT graduates and industry experts with 15+ years of teaching experience</p>
+                        <div class="feature-stats">
+                            <span class="stat">20+ Expert Teachers</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card interactive-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="icon-bg"></div>
+                        </div>
+                        <h4 class="feature-title">Performance Analytics</h4>
+                        <p class="feature-desc">Real-time performance tracking with detailed analytics and improvement suggestions</p>
+                        <div class="feature-stats">
+                            <span class="stat">99% Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Course Preview Section -->
+    <section class="course-preview-section py-5 bg-gradient">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title text-white">Our Premium Programs</h2>
+                <p class="section-subtitle text-white-50">Comprehensive coaching solutions for every competitive exam</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="course-preview-card premium-card">
+                        <div class="course-header">
+                            <div class="course-badge">Premium</div>
+                            <div class="course-icon"><i class="fas fa-rocket"></i></div>
+                        </div>
+                        <h3 class="course-title">IIT-JEE Mastery</h3>
+                        <p class="course-desc">Complete JEE Main & Advanced preparation with guaranteed results</p>
+                        <div class="course-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>300+ Hours Live Classes</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>50+ Mock Tests</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>24/7 Doubt Support</span>
+                            </div>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">₹50,000</span>
+                            <span class="duration">/year</span>
+                        </div>
+                        <a href="courses.html" class="btn btn-light btn-course">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="course-preview-card standard-card">
+                        <div class="course-header">
+                            <div class="course-badge">Popular</div>
+                            <div class="course-icon"><i class="fas fa-graduation-cap"></i></div>
+                        </div>
+                        <h3 class="course-title">EAMCET Excellence</h3>
+                        <p class="course-desc">Specialized EAMCET coaching with state topper mentorship</p>
+                        <div class="course-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>200+ Hours Classes</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Daily Practice Tests</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Crash Courses Available</span>
+                            </div>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">₹45,000</span>
+                            <span class="duration">/year</span>
+                        </div>
+                        <a href="courses.html" class="btn btn-primary btn-course">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+                <a href="courses.html" class="btn btn-outline-light btn-lg">
+                    View All Courses <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Success Stories Carousel -->
+    <section class="success-stories py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Success Stories That Inspire</h2>
+                <p class="section-subtitle">Real students, real achievements, real transformations</p>
+            </div>
+            
+            <div class="success-carousel" data-aos="fade-up" data-aos-delay="200">
+                <div class="success-slide active">
+                    <div class="success-card">
+                        <div class="student-photo">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Student">
+                            <div class="rank-badge">AIR 42</div>
+                        </div>
+                        <div class="student-info">
+                            <h4 class="student-name">Arjun Reddy</h4>
+                            <p class="student-achievement">IIT Bombay - Computer Science</p>
+                            <p class="student-quote">"Roots Academy's personalized approach and expert guidance helped me crack JEE Advanced with AIR 42."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="success-slide">
+                    <div class="success-card">
+                        <div class="student-photo">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=150&h=150&fit=crop&crop=face" alt="Student">
+                            <div class="rank-badge">Rank 5</div>
+                        </div>
+                        <div class="student-info">
+                            <h4 class="student-name">Priya Sharma</h4>
+                            <p class="student-achievement">EAMCET State Rank 5</p>
+                            <p class="student-quote">"The crash course program at Roots Academy was exactly what I needed for my EAMCET preparation."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="testimonials.html" class="btn btn-primary">View More Stories</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact CTA Section -->
+    <section class="contact-cta py-5 bg-dark text-white position-relative overflow-hidden">
+        <div class="cta-animation"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h2 class="cta-title">Ready to Start Your Success Journey?</h2>
+                    <p class="cta-subtitle mb-0">Join thousands of successful students who chose Roots Academy</p>
+                </div>
+                <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                    <a href="contact.html" class="btn btn-primary btn-lg btn-glow me-3">Get Started</a>
+                    <a href="tel:+919866915814" class="btn btn-outline-light">
+                        <i class="fas fa-phone me-2"></i>Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <div class="footer-logo mb-3">
+                            <svg width="40" height="40" viewBox="0 0 100 100" class="footer-logo-svg">
+                                <use href="#logoGradient"></use>
+                                <rect x="45" y="60" width="10" height="30" fill="#8B4513" rx="2"/>
+                                <circle cx="50" cy="45" r="20" fill="url(#logoGradient)"/>
+                                <path d="M45 90 Q35 95 25 85 Q40 92 45 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                                <path d="M55 90 Q65 95 75 85 Q60 92 55 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                                <path d="M50 90 Q50 100 45 105 Q52 98 50 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                                <polygon points="35,35 65,35 50,25" fill="#2C3E50"/>
+                                <rect x="48" y="25" width="4" height="8" fill="#2C3E50"/>
+                            </svg>
+                            <span>Roots Academy</span>
+                        </div>
+                        <p class="footer-desc">Established in 2009, we've been nurturing dreams and growing success for over 14 years.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="results.html">Results</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Courses</h5>
+                    <ul class="footer-links">
+                        <li><a href="courses.html#iit-jee">IIT-JEE</a></li>
+                        <li><a href="courses.html#eamcet">EAMCET</a></li>
+                        <li><a href="courses.html#neet">NEET</a></li>
+                        <li><a href="courses.html#bitsat">BITSAT</a></li>
+                        <li><a href="courses.html#foundations">Foundations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>JNTU Road, Kukatpally<br>Hyderabad - 500072</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98669 15814</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>rootsacademy143@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="footer-copyright mb-0">© 2025 Roots Academy. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-badges">
+                        <span class="badge bg-success">Trusted Since 2009</span>
+                        <span class="badge bg-primary">1000+ Success Stories</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/particles.js"></script>
+</body>
+</html>

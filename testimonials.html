@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Testimonials - Roots Academy | Real Success Stories</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="cursor-custom">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-morphism">
+        <div class="container">
+            <a class="navbar-brand animated-logo" href="index.html">
+                <div class="logo-container">
+                    <svg width="50" height="50" viewBox="0 0 100 100" class="logo-svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#2ECC71;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#27AE60;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="45" y="60" width="10" height="30" fill="#8B4513" rx="2"/>
+                        <circle cx="50" cy="45" r="20" fill="url(#logoGradient)" class="pulse-animation"/>
+                        <path d="M45 90 Q35 95 25 85 Q40 92 45 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                        <path d="M55 90 Q65 95 75 85 Q60 92 55 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                        <path d="M50 90 Q50 100 45 105 Q52 98 50 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                        <polygon points="35,35 65,35 50,25" fill="#2C3E50"/>
+                        <rect x="48" y="25" width="4" height="8" fill="#2C3E50"/>
+                    </svg>
+                    <span class="logo-text">Roots Academy</span>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler hamburger-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover" href="index.html">
+                            <i class="fas fa-home nav-icon"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover" href="about.html">
+                            <i class="fas fa-users nav-icon"></i>About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover" href="courses.html">
+                            <i class="fas fa-graduation-cap nav-icon"></i>Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover" href="results.html">
+                            <i class="fas fa-trophy nav-icon"></i>Results
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover active" href="testimonials.html">
+                            <i class="fas fa-comments nav-icon"></i>Testimonials
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover cta-nav" href="contact.html">
+                            <i class="fas fa-phone nav-icon"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="page-hero testimonials-hero d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="hero-content" data-aos="fade-up">
+                        <div class="hero-badge mb-3">
+                            <span class="badge-text">💬 Real Stories, Real Success</span>
+                        </div>
+                        <h1 class="page-title mb-4">
+                            What Our Students <span class="gradient-text">Say</span><br>
+                            About Their <span class="highlight-text">Journey</span>
+                        </h1>
+                        <p class="hero-subtitle mb-5">
+                            Discover how Roots Academy transformed the lives and careers of thousands of students. 
+                            From struggle to success, these are their authentic stories of growth, achievement, 
+                            and dreams fulfilled.
+                        </p>
+                        <div class="testimonial-categories" data-aos="fade-up" data-aos-delay="200">
+                            <button class="category-btn active" data-category="all">All Stories</button>
+                            <button class="category-btn" data-category="iit-jee">IIT-JEE</button>
+                            <button class="category-btn" data-category="eamcet">EAMCET</button>
+                            <button class="category-btn" data-category="neet">NEET</button>
+                            <button class="category-btn" data-category="foundation">Foundation</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Video Testimonials -->
+    <section class="video-testimonials py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Video Success Stories</h2>
+                <p class="section-subtitle">Hear directly from our successful students</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="video-testimonial-card">
+                        <div class="video-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop&crop=face" alt="Student Testimonial">
+                            <div class="play-overlay">
+                                <button class="play-btn" data-bs-toggle="modal" data-bs-target="#videoModal1">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                            <div class="video-badge">IIT-JEE Success</div>
+                        </div>
+                        <div class="video-info">
+                            <h4 class="student-name">Rohit Kumar</h4>
+                            <p class="achievement">IIT Delhi - Computer Science</p>
+                            <p class="preview-text">"The guidance I received at Roots Academy was exceptional. The faculty's dedication and personalized approach made all the difference..."</p>
+                            <div class="video-stats">
+                                <span class="stat-item"><i class="fas fa-eye"></i> 12.5K views</span>
+                                <span class="stat-item"><i class="fas fa-thumbs-up"></i> 98% liked</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="video-testimonial-card">
+                        <div class="video-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=400&h=300&fit=crop&crop=face" alt="Student Testimonial">
+                            <div class="play-overlay">
+                                <button class="play-btn" data-bs-toggle="modal" data-bs-target="#videoModal2">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                            <div class="video-badge">EAMCET Topper</div>
+                        </div>
+                        <div class="video-info">
+                            <h4 class="student-name">Meera Patel</h4>
+                            <p class="achievement">JNTU - Electronics Engineering</p>
+                            <p class="preview-text">"The crash course program was exactly what I needed. In just 45 days, I gained the confidence and knowledge to ace EAMCET..."</p>
+                            <div class="video-stats">
+                                <span class="stat-item"><i class="fas fa-eye"></i> 8.3K views</span>
+                                <span class="stat-item"><i class="fas fa-thumbs-up"></i> 96% liked</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="video-testimonial-card">
+                        <div class="video-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=300&fit=crop&crop=face" alt="Student Testimonial">
+                            <div class="play-overlay">
+                                <button class="play-btn" data-bs-toggle="modal" data-bs-target="#videoModal3">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                            <div class="video-badge">NEET Qualifier</div>
+                        </div>
+                        <div class="video-info">
+                            <h4 class="student-name">Anish Sharma</h4>
+                            <p class="achievement">Government Medical College</p>
+                            <p class="preview-text">"The biology focus sessions and regular mock tests were game-changers. Roots Academy made my NEET dream a reality..."</p>
+                            <div class="video-stats">
+                                <span class="stat-item"><i class="fas fa-eye"></i> 15.2K views</span>
+                                <span class="stat-item"><i class="fas fa-thumbs-up"></i> 99% liked</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Written Testimonials -->
+    <section class="written-testimonials py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Success Stories in Their Own Words</h2>
+                <p class="section-subtitle">Authentic feedback from our successful students</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Problem-Solution-Result Testimonial -->
+                <div class="testimonial-card iit-jee" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-header">
+                        <div class="student-photo">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Student">
+                        </div>
+                        <div class="student-details">
+                            <h4 class="student-name">Aditya Raj</h4>
+                            <p class="student-achievement">IIT Hyderabad - AI & ML</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Before joining Roots Academy, I was struggling with Physics concepts and lacked confidence for JEE Advanced. 
+                            Thanks to their structured approach and expert faculty guidance, I not only cleared JEE Main with 297 marks 
+                            but also secured AIR 89 in JEE Advanced. Now, I feel confident and ready to tackle any engineering challenge at IIT Hyderabad."
+                        </p>
+                        <div class="testimonial-category">
+                            <span class="category-tag iit-tag">IIT-JEE Success</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Results-Focused Testimonial -->
+                <div class="testimonial-card eamcet" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-header">
+                        <div class="student-photo">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=100&h=100&fit=crop&crop=face" alt="Student">
+                        </div>
+                        <div class="student-details">
+                            <h4 class="student-name">Lakshmi Reddy</h4>
+                            <p class="student-achievement">CBIT - Computer Science</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Working with Roots Academy was a game-changer. Within 6 months, I improved from 60% to 95% in my mock tests. 
+                            The strategies they shared were simple, actionable, and perfectly tailored to the EAMCET pattern. 
+                            I recommend Roots Academy to anyone looking to secure top ranks in EAMCET with confidence."
+                        </p>
+                        <div class="testimonial-category">
+                            <span class="category-tag eamcet-tag">EAMCET Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Transformation Story -->
+                <div class="testimonial-card neet" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-header">
+                        <div class="student-photo">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Student">
+                        </div>
+                        <div class="student-details">
+                            <h4 class="student-name">Vivek Kumar</h4>
+                            <p class="student-achievement">Osmania Medical College</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Before I started with Roots Academy, I was dealing with Biology anxiety and scoring poorly in Chemistry. 
+                            With their specialized NEET program and biology focus sessions, I was able to achieve 678/720 in NEET. 
+                            Now, I'm pursuing my dream of becoming a doctor at one of Telangana's premier medical colleges."
+                        </p>
+                        <div class="testimonial-category">
+                            <span class="category-tag neet-tag">NEET Achievement</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Personal Journey Testimonial -->
+                <div class="testimonial-card foundation" data-aos="fade-up" data-aos-delay="400">
+                    <div class="testimonial-header">
+                        <div class="student-photo">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Student">
+                        </div>
+                        <div class="student-details">
+                            <h4 class="student-name">Sneha Gupta</h4>
+                            <p class="student-achievement">Class 12 - 96% Boards</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "I joined the Foundation program in Class 11 when I was struggling with basic concepts. The teachers at Roots Academy 
+                            not only helped me excel in board exams with 96% but also prepared me mentally for competitive exams. 
+                            Their dual approach of board preparation with competition readiness is unmatched."
+                        </p>
+                        <div class="testimonial-category">
+                            <span class="category-tag foundation-tag">Foundation Success</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Parent Testimonial -->
+                <div class="testimonial-card parent" data-aos="fade-up" data-aos-delay="500">
+                    <div class="testimonial-header">
+                        <div class="student-photo">
+                            <img src="https://images.unsplash.com/photo-1559209172-2a8b3d4b2ee4?w=100&h=100&fit=crop&crop=face" alt="Parent">
+                        </div>
+                        <div class="student-details">
+                            <h4 class="student-name">Mrs. Sunitha Reddy</h4>
+                            <p class="student-achievement">Parent - Karthik (IIT Madras)</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "As a parent, I was initially worried about my son's progress in JEE preparation. But Roots Academy's regular 
+                            communication, transparent progress reports, and genuine care for students convinced me. 
+                            Today, seeing Karthik at IIT Madras, I can confidently say that choosing Roots Academy was the best decision we made."
+                        </p>
+                        <div class="testimonial-category">
+                            <span class="category-tag parent-tag">Parent Feedback</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Online Learning Testimonial -->
+                <div class="testimonial-card online" data-aos="fade-up" data-aos-delay="600">
+                    <div class="testimonial-header">
+                        <div class="student-photo">
+                            <img src="https://images.unsplash.com/photo-1507083664670-4bd17b57acbc?w=100&h=100&fit=crop&crop=face" alt="Student">
+                        </div>
+                        <div class="student-details">
+                            <h4 class="student-name">Rajesh Kumar</h4>
+                            <p class="student-achievement">NIT Warangal - ECE</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "During the pandemic, when physical classes weren't possible, Roots Academy's online platform was a lifesaver. 
+                            The interactive sessions, recorded lectures, and 24/7 doubt support made online learning as effective as classroom teaching. 
+                            I secured JEE Main rank 2847 purely through their online program."
+                        </p>
+                        <div class="testimonial-category">
+                            <span class="category-tag online-tag">Online Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Social Proof Section -->
+    <section class="social-proof py-5 bg-gradient">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title text-white">What the Community Says</h2>
+                <p class="section-subtitle text-white-50">Reviews from across social media and review platforms</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="social-review-card">
+                        <div class="platform-header">
+                            <div class="platform-icon google">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <div class="platform-info">
+                                <h5>Google Reviews</h5>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-score">4.9/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "Excellent coaching institute! My daughter got into IIT Bombay thanks to their guidance. 
+                            Highly professional faculty and great study environment."
+                        </p>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">- Ramesh Gupta</span>
+                            <span class="review-date">2 weeks ago</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="social-review-card">
+                        <div class="platform-header">
+                            <div class="platform-icon facebook">
+                                <i class="fab fa-facebook"></i>
+                            </div>
+                            <div class="platform-info">
+                                <h5>Facebook Reviews</h5>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-score">5.0/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "Best coaching center in Hyderabad! The online classes during COVID were amazing. 
+                            My son cleared EAMCET with top 100 rank. Thank you Roots Academy! 🙏"
+                        </p>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">- Priya Sharma</span>
+                            <span class="review-date">1 month ago</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="social-review-card">
+                        <div class="platform-header">
+                            <div class="platform-icon justdial">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="platform-info">
+                                <h5>JustDial Reviews</h5>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-score">5.0/5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "Such a great coaching centre in Kukatpally! The best path for our future to get a rank in IIT, JEE MAINS, EAMCET. 
+                            That is Roots Academy."
+                        </p>
+                        <div class="reviewer-info">
+                            <span class="reviewer-name">- Anonymous User</span>
+                            <span class="review-date">3 months ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-stats text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">4.9★</div>
+                            <div class="stat-label">Google Rating</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Google Reviews</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">5.0★</div>
+                            <div class="stat-label">Facebook Rating</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="stat-item">
+                            <div class="stat-number">1200+</div>
+                            <div class="stat-label">Happy Families</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Write a Review Section -->
+    <section class="write-review py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="review-form-card" data-aos="fade-up">
+                        <div class="form-header text-center mb-4">
+                            <h3>Share Your Success Story</h3>
+                            <p>Help future students by sharing your experience with Roots Academy</p>
+                        </div>
+                        
+                        <form id="reviewForm" class="review-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="reviewName" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="reviewName" name="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="reviewCourse" class="form-label">Course Taken</label>
+                                    <select class="form-select" id="reviewCourse" name="course" required>
+                                        <option value="">Select Course</option>
+                                        <option value="IIT-JEE">IIT-JEE</option>
+                                        <option value="EAMCET">EAMCET</option>
+                                        <option value="NEET">NEET</option>
+                                        <option value="Foundation">Foundation</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="reviewAchievement" class="form-label">Your Achievement</label>
+                                    <input type="text" class="form-control" id="reviewAchievement" name="achievement" 
+                                           placeholder="e.g., IIT Bombay CSE, EAMCET Rank 50">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="reviewRating" class="form-label">Rating</label>
+                                    <div class="rating-input">
+                                        <input type="radio" id="star5" name="rating" value="5">
+                                        <label for="star5"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="star4" name="rating" value="4">
+                                        <label for="star4"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="star3" name="rating" value="3">
+                                        <label for="star3"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="star2" name="rating" value="2">
+                                        <label for="star2"><i class="fas fa-star"></i></label>
+                                        <input type="radio" id="star1" name="rating" value="1">
+                                        <label for="star1"><i class="fas fa-star"></i></label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="reviewText" class="form-label">Your Success Story</label>
+                                <textarea class="form-control" id="reviewText" name="review" rows="5" 
+                                          placeholder="Share your journey, challenges you faced, how Roots Academy helped you, and your final achievement..." required></textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="reviewConsent" required>
+                                    <label class="form-check-label" for="reviewConsent">
+                                        I consent to sharing my story on the website and social media to inspire future students.
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>
+                                    Submit Your Story
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Modals -->
+    <div class="modal fade" id="videoModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Rohit Kumar - IIT Delhi Success Story</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="video-container">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="videoModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Meera Patel - EAMCET Success Story</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="video-container">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="videoModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Anish Sharma - NEET Success Story</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="video-container">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CTA Section -->
+    <section class="cta-section py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h2 class="cta-title mb-3">Ready to Write Your Own Success Story?</h2>
+                    <p class="cta-subtitle">Join thousands of successful students who chose Roots Academy for their journey to excellence.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                    <a href="contact.html" class="btn btn-primary btn-lg btn-glow">Start Your Journey</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <div class="footer-logo mb-3">
+                            <svg width="40" height="40" viewBox="0 0 100 100" class="footer-logo-svg">
+                                <use href="#logoGradient"></use>
+                                <rect x="45" y="60" width="10" height="30" fill="#8B4513" rx="2"/>
+                                <circle cx="50" cy="45" r="20" fill="url(#logoGradient)"/>
+                                <path d="M45 90 Q35 95 25 85 Q40 92 45 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                                <path d="M55 90 Q65 95 75 85 Q60 92 55 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                                <path d="M50 90 Q50 100 45 105 Q52 98 50 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                                <polygon points="35,35 65,35 50,25" fill="#2C3E50"/>
+                                <rect x="48" y="25" width="4" height="8" fill="#2C3E50"/>
+                            </svg>
+                            <span>Roots Academy</span>
+                        </div>
+                        <p class="footer-desc">Real stories from real students who achieved their dreams with us.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="results.html">Results</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Courses</h5>
+                    <ul class="footer-links">
+                        <li><a href="courses.html#iit-jee">IIT-JEE</a></li>
+                        <li><a href="courses.html#eamcet">EAMCET</a></li>
+                        <li><a href="courses.html#neet">NEET</a></li>
+                        <li><a href="courses.html#bitsat">BITSAT</a></li>
+                        <li><a href="courses.html#foundation">Foundation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>JNTU Road, Kukatpally<br>Hyderabad - 500072</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98669 15814</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>rootsacademy143@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="footer-copyright mb-0">© 2025 Roots Academy. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-badges">
+                        <span class="badge bg-success">4.9★ Rating</span>
+                        <span class="badge bg-primary">1200+ Reviews</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    
+    <script>
+        // Testimonial filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const testimonialCards = document.querySelectorAll('.testimonial-card');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const category = btn.getAttribute('data-category');
+                    
+                    testimonialCards.forEach(card => {
+                        if (category === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            if (card.classList.contains(category)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Rating input functionality
+            const ratingInputs = document.querySelectorAll('.rating-input input[type="radio"]');
+            const ratingLabels = document.querySelectorAll('.rating-input label');
+            
+            ratingInputs.forEach((input, index) => {
+                input.addEventListener('change', function() {
+                    ratingLabels.forEach((label, labelIndex) => {
+                        if (labelIndex >= (5 - this.value)) {
+                            label.style.color = '#ffc107';
+                        } else {
+                            label.style.color = '#ddd';
+                        }
+                    });
+                });
+            });
+            
+            // Review form submission
+            document.getElementById('reviewForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for sharing your story! We will review and publish it soon.');
+                this.reset();
+                // Reset rating stars
+                ratingLabels.forEach(label => {
+                    label.style.color = '#ddd';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

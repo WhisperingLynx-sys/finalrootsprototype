@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Roots Academy | IIT-JEE | EAMCET | NEET | BITSAT</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="cursor-custom">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-morphism">
+        <div class="container">
+            <a class="navbar-brand animated-logo" href="index.html">
+                <div class="logo-container">
+                    <svg width="50" height="50" viewBox="0 0 100 100" class="logo-svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#2ECC71;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#27AE60;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="45" y="60" width="10" height="30" fill="#8B4513" rx="2"/>
+                        <circle cx="50" cy="45" r="20" fill="url(#logoGradient)" class="pulse-animation"/>
+                        <path d="M45 90 Q35 95 25 85 Q40 92 45 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                        <path d="M55 90 Q65 95 75 85 Q60 92 55 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                        <path d="M50 90 Q50 100 45 105 Q52 98 50 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                        <polygon points="35,35 65,35 50,25" fill="#2C3E50"/>
+                        <rect x="48" y="25" width="4" height="8" fill="#2C3E50"/>
+                    </svg>
+                    <span class="logo-text">Roots Academy</span>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler hamburger-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover" href="index.html">
+                            <i class="fas fa-home nav-icon"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover" href="about.html">
+                            <i class="fas fa-users nav-icon"></i>About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover active" href="courses.html">
+                            <i class="fas fa-graduation-cap nav-icon"></i>Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover" href="results.html">
+                            <i class="fas fa-trophy nav-icon"></i>Results
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover" href="testimonials.html">
+                            <i class="fas fa-comments nav-icon"></i>Testimonials
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link glow-on-hover cta-nav" href="contact.html">
+                            <i class="fas fa-phone nav-icon"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="page-hero courses-hero d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-8 mx-auto text-center">
+                    <div class="hero-content" data-aos="fade-up">
+                        <div class="hero-badge mb-3">
+                            <span class="badge-text">🎓 Premium Coaching Programs</span>
+                        </div>
+                        <h1 class="page-title mb-4">
+                            Choose Your Path to <span class="gradient-text">Success</span>
+                        </h1>
+                        <p class="hero-subtitle mb-5">
+                            Comprehensive coaching programs designed to help you excel in competitive exams. 
+                            From IIT-JEE to NEET, we've got you covered with expert faculty, innovative teaching methods, 
+                            and proven results.
+                        </p>
+                        <div class="course-filters" data-aos="fade-up" data-aos-delay="200">
+                            <button class="filter-btn active" data-filter="all">All Courses</button>
+                            <button class="filter-btn" data-filter="engineering">Engineering</button>
+                            <button class="filter-btn" data-filter="medical">Medical</button>
+                            <button class="filter-btn" data-filter="foundation">Foundation</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Course Cards -->
+    <section class="courses-section py-5">
+        <div class="container">
+            <!-- IIT-JEE Course -->
+            <div class="course-detailed-card engineering" id="iit-jee" data-aos="fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="course-visual">
+                            <div class="course-image-container">
+                                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop" alt="IIT-JEE Coaching">
+                                <div class="course-badge-overlay">
+                                    <span class="course-badge premium">Premium</span>
+                                    <span class="course-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        5.0
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="course-details">
+                            <div class="course-header">
+                                <div class="course-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="course-meta">
+                                    <h3 class="course-title">IIT-JEE Mastery Program</h3>
+                                    <p class="course-subtitle">Complete JEE Main & Advanced Preparation</p>
+                                </div>
+                            </div>
+                            
+                            <p class="course-description">
+                                Our flagship program designed to help you crack JEE Main and Advanced. 
+                                With expert faculty from IITs, comprehensive study material, and proven 
+                                teaching methodologies, we ensure you're fully prepared for success.
+                            </p>
+                            
+                            <div class="course-features-grid">
+                                <div class="feature-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>300+ Hours Live Classes</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>50+ Mock Tests</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>24/7 Doubt Support</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Small Batch Size (15-20)</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-book"></i>
+                                    <span>Comprehensive Study Material</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Performance Analytics</span>
+                                </div>
+                            </div>
+                            
+                            <div class="course-pricing">
+                                <div class="price-container">
+                                    <span class="current-price">₹50,000</span>
+                                    <span class="original-price">₹65,000</span>
+                                    <span class="discount-badge">23% OFF</span>
+                                </div>
+                                <div class="pricing-note">*Per year | EMI options available</div>
+                            </div>
+                            
+                            <div class="course-actions">
+                                <a href="contact.html" class="btn btn-primary btn-enroll">Enroll Now</a>
+                                <button class="btn btn-outline-primary btn-demo" data-bs-toggle="modal" data-bs-target="#demoModal">Free Demo</button>
+                            </div>
+                            
+                            <div class="course-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">500+</div>
+                                    <div class="stat-label">Students Enrolled</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">95%</div>
+                                    <div class="stat-label">Success Rate</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">AIR 42</div>
+                                    <div class="stat-label">Best Rank 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- EAMCET Course -->
+            <div class="course-detailed-card engineering" id="eamcet" data-aos="fade-up" data-aos-delay="100">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="course-visual">
+                            <div class="course-image-container">
+                                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop" alt="EAMCET Coaching">
+                                <div class="course-badge-overlay">
+                                    <span class="course-badge popular">Most Popular</span>
+                                    <span class="course-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        4.9
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="course-details">
+                            <div class="course-header">
+                                <div class="course-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="course-meta">
+                                    <h3 class="course-title">EAMCET Excellence Program</h3>
+                                    <p class="course-subtitle">TS/AP EAMCET Complete Preparation</p>
+                                </div>
+                            </div>
+                            
+                            <p class="course-description">
+                                Specialized coaching for EAMCET with focus on state-specific pattern and syllabus. 
+                                Our expert faculty ensures you master Physics, Chemistry, and Mathematics with 
+                                proven strategies for top ranks.
+                            </p>
+                            
+                            <div class="course-features-grid">
+                                <div class="feature-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>200+ Hours Classes</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Daily Practice Tests</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-rocket"></i>
+                                    <span>Crash Courses Available</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-trophy"></i>
+                                    <span>State Topper Mentorship</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Mobile App Access</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>Previous Year Papers</span>
+                                </div>
+                            </div>
+                            
+                            <div class="course-pricing">
+                                <div class="price-container">
+                                    <span class="current-price">₹45,000</span>
+                                    <span class="original-price">₹55,000</span>
+                                    <span class="discount-badge">18% OFF</span>
+                                </div>
+                                <div class="pricing-note">*Per year | Crash course: ₹15,000</div>
+                            </div>
+                            
+                            <div class="course-actions">
+                                <a href="contact.html" class="btn btn-primary btn-enroll">Enroll Now</a>
+                                <button class="btn btn-outline-primary btn-demo" data-bs-toggle="modal" data-bs-target="#demoModal">Free Demo</button>
+                            </div>
+                            
+                            <div class="course-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">800+</div>
+                                    <div class="stat-label">Students Enrolled</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">98%</div>
+                                    <div class="stat-label">Success Rate</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">Rank 5</div>
+                                    <div class="stat-label">Best Rank 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NEET Course -->
+            <div class="course-detailed-card medical" id="neet" data-aos="fade-up" data-aos-delay="200">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="course-visual">
+                            <div class="course-image-container">
+                                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop" alt="NEET Coaching">
+                                <div class="course-badge-overlay">
+                                    <span class="course-badge medical">Medical</span>
+                                    <span class="course-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        4.8
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="course-details">
+                            <div class="course-header">
+                                <div class="course-icon">
+                                    <i class="fas fa-heartbeat"></i>
+                                </div>
+                                <div class="course-meta">
+                                    <h3 class="course-title">NEET Success Program</h3>
+                                    <p class="course-subtitle">Complete Medical Entrance Preparation</p>
+                                </div>
+                            </div>
+                            
+                            <p class="course-description">
+                                Comprehensive NEET preparation focusing on Biology, Physics, and Chemistry. 
+                                Our specialized medical faculty with years of experience ensures you're 
+                                ready for one of India's most competitive medical entrance exams.
+                            </p>
+                            
+                            <div class="course-features-grid">
+                                <div class="feature-item">
+                                    <i class="fas fa-microscope"></i>
+                                    <span>Biology Focus Sessions</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Weekly Mock Tests</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <span>Previous Year Analysis</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Small Batches (12-15)</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-stethoscope"></i>
+                                    <span>Medical Expert Faculty</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-laptop"></i>
+                                    <span>Online Resources</span>
+                                </div>
+                            </div>
+                            
+                            <div class="course-pricing">
+                                <div class="price-container">
+                                    <span class="current-price">₹48,000</span>
+                                    <span class="original-price">₹60,000</span>
+                                    <span class="discount-badge">20% OFF</span>
+                                </div>
+                                <div class="pricing-note">*Per year | Biology intensive: +₹8,000</div>
+                            </div>
+                            
+                            <div class="course-actions">
+                                <a href="contact.html" class="btn btn-primary btn-enroll">Enroll Now</a>
+                                <button class="btn btn-outline-primary btn-demo" data-bs-toggle="modal" data-bs-target="#demoModal">Free Demo</button>
+                            </div>
+                            
+                            <div class="course-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">400+</div>
+                                    <div class="stat-label">Students Enrolled</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">92%</div>
+                                    <div class="stat-label">Success Rate</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">AIR 156</div>
+                                    <div class="stat-label">Best Rank 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Foundation Course -->
+            <div class="course-detailed-card foundation" id="foundation" data-aos="fade-up" data-aos-delay="300">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="course-visual">
+                            <div class="course-image-container">
+                                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop" alt="Foundation Coaching">
+                                <div class="course-badge-overlay">
+                                    <span class="course-badge foundation">Foundation</span>
+                                    <span class="course-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        4.9
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="course-details">
+                            <div class="course-header">
+                                <div class="course-icon">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <div class="course-meta">
+                                    <h3 class="course-title">Foundation Program</h3>
+                                    <p class="course-subtitle">Classes 8-12 | Board Exams + Competition</p>
+                                </div>
+                            </div>
+                            
+                            <p class="course-description">
+                                Build a strong foundation from early years. Our Foundation program for classes 8-12 
+                                ensures students excel in board exams while simultaneously preparing for competitive 
+                                exams through our dual approach methodology.
+                            </p>
+                            
+                            <div class="course-features-grid">
+                                <div class="feature-item">
+                                    <i class="fas fa-building"></i>
+                                    <span>Concept Building</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-school"></i>
+                                    <span>Board Exam Focus</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-rocket"></i>
+                                    <span>Competition Prep</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Flexible Schedules</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-user-graduate"></i>
+                                    <span>Qualified Teachers</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-home"></i>
+                                    <span>Home Assignments</span>
+                                </div>
+                            </div>
+                            
+                            <div class="course-pricing">
+                                <div class="price-container">
+                                    <span class="current-price">₹25,000</span>
+                                    <span class="original-price">₹35,000</span>
+                                    <span class="discount-badge">29% OFF</span>
+                                </div>
+                                <div class="pricing-note">*Per year | Class 8-10: ₹20,000</div>
+                            </div>
+                            
+                            <div class="course-actions">
+                                <a href="contact.html" class="btn btn-primary btn-enroll">Enroll Now</a>
+                                <button class="btn btn-outline-primary btn-demo" data-bs-toggle="modal" data-bs-target="#demoModal">Free Demo</button>
+                            </div>
+                            
+                            <div class="course-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">600+</div>
+                                    <div class="stat-label">Students Enrolled</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">96%</div>
+                                    <div class="stat-label">Board Pass Rate</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">85%</div>
+                                    <div class="stat-label">Competition Ready</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Course Comparison -->
+    <section class="course-comparison py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Compare Our Programs</h2>
+                <p class="section-subtitle">Choose the perfect program based on your needs</p>
+            </div>
+            
+            <div class="comparison-table-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="table-responsive">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Features</th>
+                                <th>IIT-JEE</th>
+                                <th>EAMCET</th>
+                                <th>NEET</th>
+                                <th>Foundation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Duration</td>
+                                <td>1-2 Years</td>
+                                <td>1 Year</td>
+                                <td>1-2 Years</td>
+                                <td>Per Class</td>
+                            </tr>
+                            <tr>
+                                <td>Class Hours/Week</td>
+                                <td>15-20 Hours</td>
+                                <td>12-15 Hours</td>
+                                <td>15-18 Hours</td>
+                                <td>8-12 Hours</td>
+                            </tr>
+                            <tr>
+                                <td>Mock Tests</td>
+                                <td>50+</td>
+                                <td>40+</td>
+                                <td>45+</td>
+                                <td>Monthly</td>
+                            </tr>
+                            <tr>
+                                <td>Study Material</td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Online Access</td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                                <td><i class="fas fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Doubt Solving</td>
+                                <td>24/7</td>
+                                <td>Daily</td>
+                                <td>24/7</td>
+                                <td>Daily</td>
+                            </tr>
+                            <tr class="price-row">
+                                <td>Investment</td>
+                                <td>₹50,000/year</td>
+                                <td>₹45,000/year</td>
+                                <td>₹48,000/year</td>
+                                <td>₹25,000/year</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Demo Modal -->
+    <div class="modal fade" id="demoModal" tabindex="-1" aria-labelledby="demoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="demoModalLabel">Book Your Free Demo Class</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="demoForm" class="demo-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="demoName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="demoName" name="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="demoPhone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="demoPhone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="demoEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="demoEmail" name="email" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="demoCourse" class="form-label">Interested Course</label>
+                                <select class="form-select" id="demoCourse" name="course" required>
+                                    <option value="">Select Course</option>
+                                    <option value="IIT-JEE">IIT-JEE</option>
+                                    <option value="EAMCET">EAMCET</option>
+                                    <option value="NEET">NEET</option>
+                                    <option value="Foundation">Foundation</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="demoClass" class="form-label">Current Class</label>
+                            <select class="form-select" id="demoClass" name="class" required>
+                                <option value="">Select Class</option>
+                                <option value="8">Class 8</option>
+                                <option value="9">Class 9</option>
+                                <option value="10">Class 10</option>
+                                <option value="11">Class 11</option>
+                                <option value="12">Class 12</option>
+                                <option value="12th Pass">12th Pass</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="demoMessage" class="form-label">Message (Optional)</label>
+                            <textarea class="form-control" id="demoMessage" name="message" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="demoForm" class="btn btn-primary">Book Free Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CTA Section -->
+    <section class="cta-section py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <h2 class="cta-title mb-3">Still Confused About Which Course to Choose?</h2>
+                    <p class="cta-subtitle">Our counselors are here to help you find the perfect program based on your goals and current level.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                    <a href="contact.html" class="btn btn-primary btn-lg btn-glow me-3">Get Free Counseling</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <div class="footer-logo mb-3">
+                            <svg width="40" height="40" viewBox="0 0 100 100" class="footer-logo-svg">
+                                <use href="#logoGradient"></use>
+                                <rect x="45" y="60" width="10" height="30" fill="#8B4513" rx="2"/>
+                                <circle cx="50" cy="45" r="20" fill="url(#logoGradient)"/>
+                                <path d="M45 90 Q35 95 25 85 Q40 92 45 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                                <path d="M55 90 Q65 95 75 85 Q60 92 55 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                                <path d="M50 90 Q50 100 45 105 Q52 98 50 90" stroke="#8B4513" stroke-width="3" fill="none"/>
+                                <polygon points="35,35 65,35 50,25" fill="#2C3E50"/>
+                                <rect x="48" y="25" width="4" height="8" fill="#2C3E50"/>
+                            </svg>
+                            <span>Roots Academy</span>
+                        </div>
+                        <p class="footer-desc">Choose your path to success with our comprehensive coaching programs.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="results.html">Results</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">Courses</h5>
+                    <ul class="footer-links">
+                        <li><a href="courses.html#iit-jee">IIT-JEE</a></li>
+                        <li><a href="courses.html#eamcet">EAMCET</a></li>
+                        <li><a href="courses.html#neet">NEET</a></li>
+                        <li><a href="courses.html#bitsat">BITSAT</a></li>
+                        <li><a href="courses.html#foundation">Foundation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>JNTU Road, Kukatpally<br>Hyderabad - 500072</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98669 15814</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>rootsacademy143@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="footer-copyright mb-0">© 2025 Roots Academy. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-badges">
+                        <span class="badge bg-success">Trusted Since 2009</span>
+                        <span class="badge bg-primary">5000+ Success Stories</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    
+    <script>
+        // Course filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const courseCards = document.querySelectorAll('.course-detailed-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    courseCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            if (card.classList.contains(filter)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Demo form submission
+            document.getElementById('demoForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you! We will contact you soon to schedule your free demo class.');
+                bootstrap.Modal.getInstance(document.getElementById('demoModal')).hide();
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
